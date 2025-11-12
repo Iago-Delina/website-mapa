@@ -62,7 +62,7 @@ const Header = () => {
               className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white transition-all duration-300 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40"
               onClick={() => window.open('https://wa.me/', '_blank')}
             >
-              <FaWhatsapp className="mr-2 h-4 w-4" />
+              <WhatsAppIcon className="mr-2" size={16} />
               WhatsApp
             </Button>
           </div>
@@ -112,7 +112,7 @@ const Header = () => {
                 className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white w-full justify-center"
                 onClick={() => window.open('https://wa.me/', '_blank')}
               >
-                <FaWhatsapp className="mr-2 h-4 w-4" />
+                <WhatsAppIcon className="mr-2" size={16} />
                 WhatsApp
               </Button>
             </div>
