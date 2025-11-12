@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaDiscord, FaWhatsapp } from 'react-icons/fa';
 import { Mail } from 'lucide-react';
+import DiscordIcon from './icons/DiscordIcon';
+import WhatsAppIcon from './icons/WhatsAppIcon';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
