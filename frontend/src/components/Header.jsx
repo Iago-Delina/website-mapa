@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
-import { FaDiscord, FaWhatsapp } from 'react-icons/fa';
+import DiscordIcon from './icons/DiscordIcon';
+import WhatsAppIcon from './icons/WhatsAppIcon';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
