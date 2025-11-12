@@ -4,7 +4,8 @@ import { mockMaps } from '../data/mockMaps';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Card } from '../components/ui/card';
-import { FaDiscord, FaWhatsapp } from 'react-icons/fa';
+import DiscordIcon from '../components/icons/DiscordIcon';
+import WhatsAppIcon from '../components/icons/WhatsAppIcon';
 import { 
   ArrowLeft, 
   Maximize2, 
