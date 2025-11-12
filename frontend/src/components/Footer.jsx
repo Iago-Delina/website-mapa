@@ -54,7 +54,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-400 hover:text-emerald-400 text-sm transition-colors group"
               >
-                <FaWhatsapp className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                <WhatsAppIcon className="mr-2 group-hover:scale-110 transition-transform" size={16} />
                 WhatsApp
               </a>
               <a
