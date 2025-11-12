@@ -54,7 +54,7 @@ const Header = () => {
               className="border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400 transition-all duration-300"
               onClick={() => window.open('https://discord.com', '_blank')}
             >
-              <FaDiscord className="mr-2 h-4 w-4" />
+              <DiscordIcon className="mr-2" size={16} />
               Discord
             </Button>
             <Button
@@ -104,7 +104,7 @@ const Header = () => {
                 className="border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10 w-full justify-center"
                 onClick={() => window.open('https://discord.com', '_blank')}
               >
-                <FaDiscord className="mr-2 h-4 w-4" />
+                <DiscordIcon className="mr-2" size={16} />
                 Discord
               </Button>
               <Button
