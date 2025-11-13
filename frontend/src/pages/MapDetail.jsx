@@ -204,7 +204,7 @@ const MapDetail = () => {
                     className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white transition-all duration-300 shadow-lg hover:shadow-xl"
                     onClick={() => window.open('https://wa.me/', '_blank')}
                   >
-                    <FaWhatsapp className="mr-2 h-5 w-5" />
+                    <WhatsAppIcon className="mr-2" size={20} />
                     Contato via WhatsApp
                   </Button>
                 </div>
