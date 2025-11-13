@@ -70,14 +70,14 @@ const MapCard = ({ map }) => {
             )}
           </div>
 
-          {/* Price */}
+          {/* Size & Complexity */}
           <div className="flex items-center justify-between pt-3 border-t border-emerald-500/10">
-            <span className="text-sm text-gray-500">
-              {map.dimensions.width} × {map.dimensions.height}px
+            <span className="text-sm text-gray-400">
+              Tamanho: <span className="text-emerald-400 font-medium">{map.size}</span>
             </span>
-            <span className="text-lg font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              R$ {map.price.toFixed(2)}
-            </span>
+            <Badge className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 border-emerald-500/30">
+              {map.complexity}
+            </Badge>
           </div>
         </div>
       </Card>
