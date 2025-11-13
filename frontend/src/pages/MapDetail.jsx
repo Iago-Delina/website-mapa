@@ -129,9 +129,12 @@ const MapDetail = () => {
                     </Badge>
                   )}
                 </div>
-                <div className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                  R$ {map.price.toFixed(2)}
+                <div className="text-2xl font-semibold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+                  Orçamento Sob Consulta
                 </div>
+                <p className="text-sm text-gray-400 mt-1">
+                  Entre em contato para valores personalizados
+                </p>
               </div>
 
               {/* Specs Card */}
