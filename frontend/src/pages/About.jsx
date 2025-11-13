@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { FaDiscord, FaWhatsapp } from 'react-icons/fa';
 import { Palette, Zap, Heart, Mail } from 'lucide-react';
+import DiscordIcon from '../components/icons/DiscordIcon';
+import WhatsAppIcon from '../components/icons/WhatsAppIcon';
 
 const About = () => {
   return (
