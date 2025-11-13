@@ -114,14 +114,14 @@ const About = () => {
                 className="bg-[#5865F2] hover:bg-[#4752C4] text-white transition-all duration-300 shadow-lg hover:shadow-xl"
                 onClick={() => window.open('https://discord.com', '_blank')}
               >
-                <FaDiscord className="mr-2 h-5 w-5" />
+                <DiscordIcon className="mr-2" size={20} />
                 Discord
               </Button>
               <Button
                 className="bg-[#25D366] hover:bg-[#20BA5A] text-white transition-all duration-300 shadow-lg hover:shadow-xl"
                 onClick={() => window.open('https://wa.me/', '_blank')}
               >
-                <FaWhatsapp className="mr-2 h-5 w-5" />
+                <WhatsAppIcon className="mr-2" size={20} />
                 WhatsApp
               </Button>
               <Button
