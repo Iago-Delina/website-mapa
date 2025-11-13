@@ -14,7 +14,6 @@ import {
   Ruler, 
   Tag,
   User,
-  DollarSign,
   CheckCircle2,
   XCircle
 } from 'lucide-react';
