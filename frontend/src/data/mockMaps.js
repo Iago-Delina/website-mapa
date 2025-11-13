@@ -6,14 +6,14 @@ export const mockMaps = [
     slug: 'fortaleza-do-abismo',
     description: 'Mapa épico de dungeon com múltiplos níveis, ideal para raids e boss fights. Design sombrio com elementos de fogo e lava.',
     tags: ['dungeon', 'boss', 'raid', 'fire'],
-    dimensions: { width: 8000, height: 6000 },
+    size: 'Grande',
+    complexity: 'Avançado',
     thumbnail: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&h=600&fit=crop',
     images: [
       'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&h=900&fit=crop',
       'https://images.unsplash.com/photo-1551847812-f815b816e017?w=1200&h=900&fit=crop'
     ],
     author: 'Iago Delina',
-    price: 150.00,
     status: 'available',
     createdAt: '2025-01-15'
   },
