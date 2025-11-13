@@ -144,8 +144,16 @@ const MapDetail = () => {
                 <div className="flex items-center text-gray-300">
                   <Ruler className="h-5 w-5 text-emerald-400 mr-3 flex-shrink-0" />
                   <div>
-                    <div className="text-sm text-gray-500">Dimensões</div>
-                    <div className="font-medium">{map.dimensions.width} × {map.dimensions.height}px</div>
+                    <div className="text-sm text-gray-500">Tamanho</div>
+                    <div className="font-medium">{map.size}</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center text-gray-300">
+                  <Tag className="h-5 w-5 text-emerald-400 mr-3 flex-shrink-0" />
+                  <div>
+                    <div className="text-sm text-gray-500">Complexidade</div>
+                    <div className="font-medium">{map.complexity}</div>
                   </div>
                 </div>
 
