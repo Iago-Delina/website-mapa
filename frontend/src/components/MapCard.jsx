@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
 import { ExternalLink, Eye } from 'lucide-react';
+import MapPlaceholder from './MapPlaceholder';
 
 const MapCard = ({ map }) => {
   return (
@@ -10,12 +11,7 @@ const MapCard = ({ map }) => {
       <Card className="overflow-hidden bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-2">
         {/* Image */}
         <div className="relative overflow-hidden aspect-[4/3]">
-          <img
-            src={map.thumbnail}
-            alt={map.title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            loading="lazy"
-          />
+          <MapPlaceholder title={map.title} category={map.tags[0]} />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           
           {/* Status Badge */}
