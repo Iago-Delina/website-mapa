@@ -171,7 +171,7 @@ const MapDetail = () => {
                   <Ruler className="h-5 w-5 text-emerald-400 mr-3 flex-shrink-0" />
                   <div>
                     <div className="text-sm text-gray-500">{t('size')}</div>
-                    <div className="font-medium">{map.size}</div>
+                    <div className="font-medium">{t(map.size)}</div>
                   </div>
                 </div>
 
@@ -179,7 +179,7 @@ const MapDetail = () => {
                   <Tag className="h-5 w-5 text-emerald-400 mr-3 flex-shrink-0" />
                   <div>
                     <div className="text-sm text-gray-500">{t('complexity')}</div>
-                    <div className="font-medium">{map.complexity}</div>
+                    <div className="font-medium">{t(map.complexity)}</div>
                   </div>
                 </div>
 
