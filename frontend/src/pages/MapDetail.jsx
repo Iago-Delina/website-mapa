@@ -55,10 +55,10 @@ const MapDetail = () => {
     return (
       <div className="min-h-screen bg-gradient-to-b from-[#0a0a0b] via-[#0f1011] to-[#0a0a0b] flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Mapa não encontrado</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">{t('noMapsFound')}</h2>
           <Link to="/">
             <Button className="bg-emerald-500 hover:bg-emerald-600">
-              Voltar para Galeria
+              {t('backToGallery')}
             </Button>
           </Link>
         </div>
