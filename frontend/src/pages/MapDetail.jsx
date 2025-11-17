@@ -222,10 +222,10 @@ const MapDetail = () => {
               {/* Contact CTA */}
               <Card className="bg-gradient-to-br from-emerald-900/30 to-teal-900/20 border-emerald-500/30 p-6 space-y-4">
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  Interessado neste mapa?
+                  {t('interestedInMap')}
                 </h3>
                 <p className="text-sm text-gray-300 mb-4">
-                  Entre em contato para solicitar orçamento ou tirar dúvidas.
+                  {t('contactForQuote')}
                 </p>
                 
                 <div className="space-y-3">
@@ -234,7 +234,7 @@ const MapDetail = () => {
                     onClick={() => window.open('https://discord.com', '_blank')}
                   >
                     <DiscordIcon className="mr-2" size={20} />
-                    Contato via Discord
+                    {t('contactViaDiscord')}
                   </Button>
                   
                   <Button
@@ -242,7 +242,7 @@ const MapDetail = () => {
                     onClick={() => window.open('https://wa.me/', '_blank')}
                   >
                     <WhatsAppIcon className="mr-2" size={20} />
-                    Contato via WhatsApp
+                    {t('contactViaWhatsApp')}
                   </Button>
                 </div>
               </Card>
