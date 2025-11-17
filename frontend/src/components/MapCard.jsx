@@ -13,14 +13,19 @@ const MapCard = ({ map }) => {
         <div className="relative overflow-hidden aspect-[4/3]">
           {map.thumbnail ? (
             <img
-              src={map.thumbnail}
+              src={map.thumbnail.startsWith('http') ? map.thumbnail : `${process.env.REACT_APP_BACKEND_URL}${map.thumbnail}`}
               alt={map.title}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               loading="lazy"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }}
             />
-          ) : (
+          ) : null}
+          <div style={{display: map.thumbnail ? 'none' : 'block'}}>
             <MapPlaceholder title={map.title} category={map.tags[0]} />
-          )}
+          </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           
           {/* Status Badges */}
