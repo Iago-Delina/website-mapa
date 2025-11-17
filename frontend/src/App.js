@@ -9,6 +9,7 @@ import MapDetail from "./pages/MapDetail";
 import About from "./pages/About";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
+import AdminMapForm from "./pages/AdminMapForm";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/admin/maps/new" element={<AdminMapForm />} />
           </Routes>
           <Footer />
         </BrowserRouter>
