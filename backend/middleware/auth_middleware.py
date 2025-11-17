@@ -4,6 +4,7 @@ from utils.auth import decode_token
 from motor.motor_asyncio import AsyncIOMotorClient
 from dotenv import load_dotenv
 from pathlib import Path
+from bson import ObjectId
 import os
 
 ROOT_DIR = Path(__file__).parent.parent
@@ -33,7 +34,15 @@ async def get_current_admin(credentials: HTTPAuthorizationCredentials = Depends(
             detail="Invalid authentication credentials",
         )
     
-    admin = await db.admins.find_one({"_id": admin_id})
+    # Convert string ID to ObjectId
+    try:
+        admin = await db.admins.find_one({"_id": ObjectId(admin_id)})
+    except Exception:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid admin ID",
+        )
+    
     if admin is None:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
