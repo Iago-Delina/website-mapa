@@ -91,7 +91,7 @@ const Gallery = () => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
               <Input
                 type="text"
-                placeholder="Buscar mapas..."
+                placeholder={t('searchMaps')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 bg-gray-900/50 border-emerald-500/20 focus:border-emerald-400 text-white placeholder:text-gray-500"
@@ -103,7 +103,7 @@ const Gallery = () => {
               className="border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400 hover:text-emerald-300"
             >
               <Filter className="mr-2 h-4 w-4" />
-              Filtros
+              {t('filters')}
               {selectedTags.length > 0 && (
                 <Badge className="ml-2 bg-emerald-500 text-white">
                   {selectedTags.length}
