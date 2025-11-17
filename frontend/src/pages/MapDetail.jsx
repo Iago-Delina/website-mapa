@@ -246,17 +246,6 @@ const MapDetail = () => {
                   </Button>
                 </div>
               </Card>
-
-              {/* Download Button (if available) */}
-              {map.status === 'available' && (
-                <Button
-                  variant="outline"
-                  className="w-full border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10"
-                >
-                  <Download className="mr-2 h-4 w-4" />
-                  {t('downloadPreview')}
-                </Button>
-              )}
             </div>
           </div>
         </div>
