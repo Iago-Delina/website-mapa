@@ -72,7 +72,21 @@ const translations = {
     links: 'Links',
     contact: 'Contato',
     allRightsReserved: 'Todos os direitos reservados.',
-    developedWithLove: 'Desenvolvido com ❤️ para a comunidade Tibia'
+    developedWithLove: 'Desenvolvido com ❤️ para a comunidade Tibia',
+    
+    // Map Sizes
+    'Minúsculo': 'Minúsculo',
+    'Pequeno': 'Pequeno',
+    'Médio': 'Médio',
+    'Grande': 'Grande',
+    'Enorme': 'Enorme',
+    'Colossal': 'Colossal',
+    
+    // Map Complexity
+    'Básico': 'Básico',
+    'Intermediário': 'Intermediário',
+    'Avançado': 'Avançado',
+    'Épico': 'Épico'
   },
   en: {
     // Header
