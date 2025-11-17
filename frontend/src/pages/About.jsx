@@ -14,10 +14,10 @@ const About = () => {
       <div className="container mx-auto px-4 lg:px-8 pt-32 pb-16">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            Sobre o Xhyz
+            {t('aboutXhyz')}
           </h1>
           <p className="text-xl text-gray-400 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-150">
-            Criando mundos épicos para a comunidade Tibia
+            {t('creatingEpicWorlds')}
           </p>
         </div>
       </div>
