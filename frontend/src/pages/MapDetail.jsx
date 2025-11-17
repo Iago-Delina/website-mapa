@@ -130,7 +130,7 @@ const MapDetail = () => {
 
               {/* Description Card */}
               <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-emerald-500/20 p-6">
-                <h2 className="text-xl font-semibold text-white mb-4">Sobre o Mapa</h2>
+                <h2 className="text-xl font-semibold text-white mb-4">{t('aboutMap')}</h2>
                 <p className="text-gray-300 leading-relaxed">
                   {map.description}
                 </p>
