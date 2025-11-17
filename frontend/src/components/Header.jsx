@@ -58,7 +58,7 @@ const Header = () => {
               title={language === 'pt' ? 'Switch to English' : 'Mudar para Português'}
             >
               <Globe className="h-4 w-4 mr-1" />
-              {language === 'pt' ? 'EN' : 'PT'}
+              {language.toUpperCase()}
             </Button>
             <Button
               variant="outline"
