@@ -254,7 +254,7 @@ const MapDetail = () => {
                   className="w-full border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10"
                 >
                   <Download className="mr-2 h-4 w-4" />
-                  Download Preview (Baixa Resolução)
+                  {t('downloadPreview')}
                 </Button>
               )}
             </div>
