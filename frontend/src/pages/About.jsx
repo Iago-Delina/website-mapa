@@ -44,9 +44,9 @@ const About = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-400 mb-4 group-hover:scale-110 transition-transform">
                 <Palette className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Design Único</h3>
+              <h3 className="text-xl font-bold text-white mb-2">{t('uniqueDesign')}</h3>
               <p className="text-gray-400 text-sm">
-                Cada mapa é uma obra de arte original, criada especialmente para as necessidades do seu projeto.
+                {t('uniqueDesignDesc')}
               </p>
             </Card>
 
@@ -54,9 +54,9 @@ const About = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-400 mb-4 group-hover:scale-110 transition-transform">
                 <Zap className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Entrega Rápida</h3>
+              <h3 className="text-xl font-bold text-white mb-2">{t('fastDelivery')}</h3>
               <p className="text-gray-400 text-sm">
-                Processos otimizados para garantir que seu mapa esteja pronto no menor tempo possível.
+                {t('fastDeliveryDesc')}
               </p>
             </Card>
 
@@ -64,9 +64,9 @@ const About = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-400 mb-4 group-hover:scale-110 transition-transform">
                 <Heart className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Suporte Dedicado</h3>
+              <h3 className="text-xl font-bold text-white mb-2">{t('dedicatedSupport')}</h3>
               <p className="text-gray-400 text-sm">
-                Estamos sempre disponíveis para ajustar e personalizar conforme suas necessidades.
+                {t('dedicatedSupportDesc')}
               </p>
             </Card>
           </div>
