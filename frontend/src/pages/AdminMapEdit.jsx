@@ -45,7 +45,8 @@ const AdminMapEdit = () => {
           tags: map.tags.join(', '),
           size: map.size,
           complexity: map.complexity,
-          status: map.status
+          status: map.status,
+          cliente: map.cliente || ''
         });
         setImages(map.images || []);
       }
