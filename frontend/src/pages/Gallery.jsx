@@ -70,14 +70,13 @@ const Gallery = () => {
         <div className="relative container mx-auto px-4 lg:px-8 pt-32 pb-20">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom-4 duration-1000">
-              Mapas Profissionais
+              {t('professionalMaps')}
             </h1>
             <p className="text-xl md:text-2xl text-gray-400 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-150">
-              para servidores de Tibia
+              {t('forTibiaServers')}
             </p>
             <p className="text-base text-gray-500 max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
-              Designs únicos e épicos que transformam a experiência dos jogadores.
-              Explore a galeria e encontre o mapa perfeito para seu projeto.
+              {t('professionalMapsForTibia')} {t('transformServer')}
             </p>
           </div>
         </div>
