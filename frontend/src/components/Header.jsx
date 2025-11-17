@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { Button } from './ui/button';
 import DiscordIcon from './icons/DiscordIcon';
 import WhatsAppIcon from './icons/WhatsAppIcon';
+import { useLanguage } from '../context/LanguageContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const location = useLocation();
+  const { language, toggleLanguage, t } = useLanguage();
 
   const isActive = (path) => location.pathname === path;
 
