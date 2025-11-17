@@ -204,7 +204,7 @@ const MapDetail = () => {
               <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-emerald-500/20 p-6">
                 <div className="flex items-center mb-3">
                   <Tag className="h-5 w-5 text-emerald-400 mr-2" />
-                  <h3 className="text-lg font-semibold text-white">Categorias</h3>
+                  <h3 className="text-lg font-semibold text-white">{t('categories')}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {map.tags.map((tag, index) => (
