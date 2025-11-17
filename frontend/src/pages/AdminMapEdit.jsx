@@ -20,7 +20,8 @@ const AdminMapEdit = () => {
     tags: '',
     size: 'Médio',
     complexity: 'Intermediário',
-    status: 'available'
+    status: 'available',
+    cliente: ''
   });
   const [images, setImages] = useState([]);
   const [uploadingImages, setUploadingImages] = useState(false);
