@@ -27,17 +27,13 @@ const About = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Story */}
           <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-emerald-500/20 p-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Nossa História</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">{t('ourStory')}</h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                O Xhyz nasceu da paixão por criar experiências únicas e memoráveis para servidores de Tibia. 
-                Com anos de experiência em design de mapas e profundo conhecimento do universo do jogo, 
-                nos dedicamos a transformar ideias em realidade digital.
+                {t('storyText1')}
               </p>
               <p>
-                Cada mapa é cuidadosamente elaborado com atenção aos detalhes, equilíbrio de gameplay 
-                e estética visual impressionante. Nosso objetivo é fornecer aos administradores de servidores 
-                ferramentas para criar mundos que seus jogadores vão amar explorar.
+                {t('storyText2')}
               </p>
             </div>
           </Card>
