@@ -73,27 +73,27 @@ const About = () => {
 
           {/* Services */}
           <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-emerald-500/20 p-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Serviços</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">{t('services')}</h2>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 rounded-full bg-emerald-400 mt-2 flex-shrink-0" />
                 <div>
-                  <h3 className="text-white font-semibold mb-1">Mapas Customizados</h3>
-                  <p className="text-gray-400 text-sm">Criação de mapas do zero baseados em suas especificações e requisitos.</p>
+                  <h3 className="text-white font-semibold mb-1">{t('customMaps')}</h3>
+                  <p className="text-gray-400 text-sm">{t('customMapsDesc')}</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 rounded-full bg-emerald-400 mt-2 flex-shrink-0" />
                 <div>
-                  <h3 className="text-white font-semibold mb-1">Modificação de Mapas</h3>
-                  <p className="text-gray-400 text-sm">Adaptação e melhoria de mapas existentes para atender novas necessidades.</p>
+                  <h3 className="text-white font-semibold mb-1">{t('mapModification')}</h3>
+                  <p className="text-gray-400 text-sm">{t('mapModificationDesc')}</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 rounded-full bg-emerald-400 mt-2 flex-shrink-0" />
                 <div>
-                  <h3 className="text-white font-semibold mb-1">Consultoria</h3>
-                  <p className="text-gray-400 text-sm">Orientação sobre design de mapas, balanceamento e melhores práticas.</p>
+                  <h3 className="text-white font-semibold mb-1">{t('consulting')}</h3>
+                  <p className="text-gray-400 text-sm">{t('consultingDesc')}</p>
                 </div>
               </div>
             </div>
