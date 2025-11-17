@@ -15,7 +15,8 @@ import {
   Tag,
   User,
   CheckCircle2,
-  XCircle
+  XCircle,
+  Loader2
 } from 'lucide-react';
 
 const MapDetail = () => {
