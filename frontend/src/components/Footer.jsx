@@ -19,27 +19,26 @@ const Footer = () => {
               Xhyz
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Mapas profissionais para servidores de Tibia.
-              Transforme seu servidor com designs únicos e épicos.
+              {t('professionalMapsForTibia')} {t('transformServer')}
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Links</h3>
+            <h3 className="text-white font-semibold mb-4">{t('links')}</h3>
             <div className="space-y-2">
               <Link to="/" className="block text-gray-400 hover:text-emerald-400 text-sm transition-colors">
-                Galeria
+                {t('gallery')}
               </Link>
               <Link to="/about" className="block text-gray-400 hover:text-emerald-400 text-sm transition-colors">
-                Sobre
+                {t('about')}
               </Link>
             </div>
           </div>
 
           {/* Contato */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contato</h3>
+            <h3 className="text-white font-semibold mb-4">{t('contact')}</h3>
             <div className="space-y-3">
               <a
                 href="https://discord.com"
