@@ -10,7 +10,7 @@ const MapCard = ({ map }) => {
     <Link to={`/map/${map.slug}`} className="group block">
       <Card className="overflow-hidden bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-2">
         {/* Image */}
-        <div className="relative overflow-hidden aspect-[4/3]">
+        <div className="relative overflow-hidden aspect-[4/3] bg-gray-900">
           {map.thumbnail ? (
             <img
               src={map.thumbnail.startsWith('http') ? map.thumbnail : `${process.env.REACT_APP_BACKEND_URL}${map.thumbnail}`}
@@ -18,12 +18,17 @@ const MapCard = ({ map }) => {
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               loading="lazy"
               onError={(e) => {
+                console.error('Error loading image:', e.target.src);
                 e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'block';
+                const placeholder = e.target.parentElement.querySelector('.map-placeholder');
+                if (placeholder) placeholder.style.display = 'flex';
+              }}
+              onLoad={(e) => {
+                console.log('Image loaded successfully:', e.target.src);
               }}
             />
           ) : null}
-          <div style={{display: map.thumbnail ? 'none' : 'block'}}>
+          <div className="map-placeholder w-full h-full" style={{display: map.thumbnail ? 'none' : 'flex'}}>
             <MapPlaceholder title={map.title} category={map.tags[0]} />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
