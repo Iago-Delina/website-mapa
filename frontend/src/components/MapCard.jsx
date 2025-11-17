@@ -11,17 +11,30 @@ const MapCard = ({ map }) => {
       <Card className="overflow-hidden bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-2">
         {/* Image */}
         <div className="relative overflow-hidden aspect-[4/3]">
-          <MapPlaceholder title={map.title} category={map.tags[0]} />
+          {map.thumbnail ? (
+            <img
+              src={map.thumbnail}
+              alt={map.title}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              loading="lazy"
+            />
+          ) : (
+            <MapPlaceholder title={map.title} category={map.tags[0]} />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           
-          {/* Status Badge */}
-          {map.status === 'sold' && (
-            <div className="absolute top-3 right-3">
-              <Badge variant="destructive" className="bg-red-500/90 backdrop-blur-sm">
+          {/* Status Badges */}
+          <div className="absolute top-3 right-3 flex flex-col gap-2">
+            {map.status === 'sold' ? (
+              <Badge className="bg-red-500/90 backdrop-blur-sm text-white border-0">
                 Vendido
               </Badge>
-            </div>
-          )}
+            ) : (
+              <Badge className="bg-emerald-500/90 backdrop-blur-sm text-white border-0">
+                Disponível
+              </Badge>
+            )}
+          </div>
           
           {/* Hover Overlay */}
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
