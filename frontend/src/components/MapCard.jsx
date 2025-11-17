@@ -86,10 +86,10 @@ const MapCard = ({ map }) => {
           {/* Size & Complexity */}
           <div className="flex items-center justify-between pt-3 border-t border-emerald-500/10">
             <span className="text-sm text-gray-400">
-              {t('size')}: <span className="text-emerald-400 font-medium">{map.size}</span>
+              {t('size')}: <span className="text-emerald-400 font-medium">{t(map.size)}</span>
             </span>
             <Badge className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 border-emerald-500/30">
-              {map.complexity}
+              {t(map.complexity)}
             </Badge>
           </div>
         </div>
