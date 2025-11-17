@@ -15,16 +15,13 @@ const MapCard = ({ map }) => {
             <img
               src={map.thumbnail.startsWith('http') ? map.thumbnail : `${process.env.REACT_APP_BACKEND_URL}${map.thumbnail}`}
               alt={map.title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-full object-contain bg-gray-800 transition-transform duration-700 group-hover:scale-110"
               loading="lazy"
               onError={(e) => {
                 console.error('Error loading image:', e.target.src);
                 e.target.style.display = 'none';
                 const placeholder = e.target.parentElement.querySelector('.map-placeholder');
                 if (placeholder) placeholder.style.display = 'flex';
-              }}
-              onLoad={(e) => {
-                console.log('Image loaded successfully:', e.target.src);
               }}
             />
           ) : null}
