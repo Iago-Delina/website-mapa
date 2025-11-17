@@ -102,10 +102,10 @@ const About = () => {
           {/* CTA */}
           <Card className="bg-gradient-to-br from-emerald-900/30 to-teal-900/20 border-emerald-500/30 p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Pronto para criar algo incrível?
+              {t('readyToCreate')}
             </h2>
             <p className="text-gray-300 mb-6">
-              Entre em contato e vamos discutir seu projeto!
+              {t('discussProject')}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button
@@ -113,14 +113,14 @@ const About = () => {
                 onClick={() => window.open('https://discord.com', '_blank')}
               >
                 <DiscordIcon className="mr-2" size={20} />
-                Discord
+                {t('discord')}
               </Button>
               <Button
                 className="bg-[#25D366] hover:bg-[#20BA5A] text-white transition-all duration-300 shadow-lg hover:shadow-xl"
                 onClick={() => window.open('https://wa.me/', '_blank')}
               >
                 <WhatsAppIcon className="mr-2" size={20} />
-                WhatsApp
+                {t('whatsapp')}
               </Button>
               <Button
                 variant="outline"
@@ -128,7 +128,7 @@ const About = () => {
                 onClick={() => window.location.href = 'mailto:contato@xhyz.com'}
               >
                 <Mail className="mr-2 h-4 w-4" />
-                Email
+                {t('email')}
               </Button>
             </div>
           </Card>
