@@ -2,7 +2,12 @@ from fastapi import APIRouter, HTTPException, Query
 from motor.motor_asyncio import AsyncIOMotorClient
 from typing import List, Optional
 from models.map import MapResponse
+from dotenv import load_dotenv
+from pathlib import Path
 import os
+
+ROOT_DIR = Path(__file__).parent.parent
+load_dotenv(ROOT_DIR / '.env')
 
 router = APIRouter()
 
