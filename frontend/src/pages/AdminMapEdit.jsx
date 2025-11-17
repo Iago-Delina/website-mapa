@@ -93,7 +93,8 @@ const AdminMapEdit = () => {
         complexity: formData.complexity,
         thumbnail: images[0] || '',
         images: images,
-        status: formData.status
+        status: formData.status,
+        cliente: formData.cliente || null
       });
 
       alert('Mapa atualizado com sucesso!');
