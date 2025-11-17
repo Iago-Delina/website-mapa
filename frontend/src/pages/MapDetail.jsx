@@ -6,6 +6,7 @@ import { Badge } from '../components/ui/badge';
 import { Card } from '../components/ui/card';
 import DiscordIcon from '../components/icons/DiscordIcon';
 import WhatsAppIcon from '../components/icons/WhatsAppIcon';
+import { useLanguage } from '../context/LanguageContext';
 import { 
   ArrowLeft, 
   Maximize2, 
@@ -21,6 +22,7 @@ import {
 
 const MapDetail = () => {
   const { slug } = useParams();
+  const { t } = useLanguage();
   const [map, setMap] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState(0);
