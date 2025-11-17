@@ -1,17 +1,37 @@
-import React, { useState, useMemo } from 'react';
-import { mockMaps, getAllTags } from '../data/mockMaps';
+import React, { useState, useMemo, useEffect } from 'react';
+import { getMaps, getTags } from '../services/apiService';
 import MapCard from '../components/MapCard';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Badge } from '../components/ui/badge';
-import { Search, Filter, X } from 'lucide-react';
+import { Search, Filter, X, Loader2 } from 'lucide-react';
 
 const Gallery = () => {
+  const [maps, setMaps] = useState([]);
+  const [allTags, setAllTags] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
   const [showFilters, setShowFilters] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const allTags = getAllTags();
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const [mapsData, tagsData] = await Promise.all([
+        getMaps(),
+        getTags()
+      ]);
+      setMaps(mapsData);
+      setAllTags(tagsData);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const toggleTag = (tag) => {
     setSelectedTags(prev =>
@@ -22,7 +42,7 @@ const Gallery = () => {
   };
 
   const filteredMaps = useMemo(() => {
-    return mockMaps.filter(map => {
+    return maps.filter(map => {
       const matchesSearch = map.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            map.description.toLowerCase().includes(searchTerm.toLowerCase());
       
@@ -31,7 +51,7 @@ const Gallery = () => {
       
       return matchesSearch && matchesTags;
     });
-  }, [searchTerm, selectedTags]);
+  }, [maps, searchTerm, selectedTags]);
 
   const clearFilters = () => {
     setSearchTerm('');
