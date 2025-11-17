@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { login as apiLogin, logout as apiLogout, getCurrentAdmin } from '../services/apiService';
+import { login as apiLogin, getCurrentAdmin } from '../services/apiService';
 
 const AdminContext = createContext();
 
@@ -56,7 +56,6 @@ export const AdminProvider = ({ children }) => {
   };
 
   const logout = async () => {
-    await apiLogout();
     localStorage.removeItem('admin_token');
     setAdmin(null);
     setIsAuthenticated(false);
