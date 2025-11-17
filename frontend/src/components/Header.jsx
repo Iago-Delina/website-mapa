@@ -51,7 +51,7 @@ const Header = () => {
             <Button
               variant="outline"
               size="sm"
-              className="border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400 transition-all duration-300"
+              className="border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400 hover:text-emerald-300 transition-all duration-300"
               onClick={() => window.open('https://discord.com', '_blank')}
             >
               <DiscordIcon className="mr-2" size={16} />
