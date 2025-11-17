@@ -47,7 +47,7 @@ const Footer = () => {
                 className="flex items-center text-gray-400 hover:text-emerald-400 text-sm transition-colors group"
               >
                 <DiscordIcon className="mr-2 group-hover:scale-110 transition-transform" size={16} />
-                Discord
+                {t('discord')}
               </a>
               <a
                 href="https://wa.me/"
@@ -56,14 +56,14 @@ const Footer = () => {
                 className="flex items-center text-gray-400 hover:text-emerald-400 text-sm transition-colors group"
               >
                 <WhatsAppIcon className="mr-2 group-hover:scale-110 transition-transform" size={16} />
-                WhatsApp
+                {t('whatsapp')}
               </a>
               <a
                 href="mailto:contato@xhyz.com"
                 className="flex items-center text-gray-400 hover:text-emerald-400 text-sm transition-colors group"
               >
                 <Mail className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                Email
+                {t('email')}
               </a>
             </div>
           </div>
