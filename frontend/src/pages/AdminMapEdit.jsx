@@ -191,16 +191,30 @@ const AdminMapEdit = () => {
               />
             </div>
 
-            <div>
-              <label className="text-sm text-gray-400 mb-2 block">Status</label>
-              <select
-                value={formData.status}
-                onChange={(e) => setFormData({...formData, status: e.target.value})}
-                className="w-full bg-gray-900/50 border border-emerald-500/20 text-white rounded-md p-2"
-              >
-                <option value="available">Disponível</option>
-                <option value="sold">Vendido</option>
-              </select>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="text-sm text-gray-400 mb-2 block">Status</label>
+                <select
+                  value={formData.status}
+                  onChange={(e) => setFormData({...formData, status: e.target.value})}
+                  className="w-full bg-gray-900/50 border border-emerald-500/20 text-white rounded-md p-2"
+                >
+                  <option value="available">Disponível</option>
+                  <option value="sold">Vendido</option>
+                </select>
+              </div>
+
+              {formData.status === 'sold' && (
+                <div>
+                  <label className="text-sm text-gray-400 mb-2 block">Nome do Cliente</label>
+                  <Input
+                    value={formData.cliente}
+                    onChange={(e) => setFormData({...formData, cliente: e.target.value})}
+                    placeholder="Nome do cliente"
+                    className="bg-gray-900/50 border-emerald-500/20 text-white"
+                  />
+                </div>
+              )}
             </div>
 
             <div>
