@@ -165,12 +165,12 @@ const MapDetail = () => {
 
               {/* Specs Card */}
               <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-emerald-500/20 p-6 space-y-4">
-                <h3 className="text-lg font-semibold text-white mb-4">Especificações</h3>
+                <h3 className="text-lg font-semibold text-white mb-4">{t('specifications')}</h3>
                 
                 <div className="flex items-center text-gray-300">
                   <Ruler className="h-5 w-5 text-emerald-400 mr-3 flex-shrink-0" />
                   <div>
-                    <div className="text-sm text-gray-500">Tamanho</div>
+                    <div className="text-sm text-gray-500">{t('size')}</div>
                     <div className="font-medium">{map.size}</div>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ const MapDetail = () => {
                 <div className="flex items-center text-gray-300">
                   <Tag className="h-5 w-5 text-emerald-400 mr-3 flex-shrink-0" />
                   <div>
-                    <div className="text-sm text-gray-500">Complexidade</div>
+                    <div className="text-sm text-gray-500">{t('complexity')}</div>
                     <div className="font-medium">{map.complexity}</div>
                   </div>
                 </div>
@@ -186,7 +186,7 @@ const MapDetail = () => {
                 <div className="flex items-center text-gray-300">
                   <Calendar className="h-5 w-5 text-emerald-400 mr-3 flex-shrink-0" />
                   <div>
-                    <div className="text-sm text-gray-500">Data de Criação</div>
+                    <div className="text-sm text-gray-500">{t('creationDate')}</div>
                     <div className="font-medium">{new Date(map.createdAt).toLocaleDateString('pt-BR')}</div>
                   </div>
                 </div>
@@ -194,7 +194,7 @@ const MapDetail = () => {
                 <div className="flex items-center text-gray-300">
                   <User className="h-5 w-5 text-emerald-400 mr-3 flex-shrink-0" />
                   <div>
-                    <div className="text-sm text-gray-500">Autor</div>
+                    <div className="text-sm text-gray-500">{t('author')}</div>
                     <div className="font-medium">{map.author}</div>
                   </div>
                 </div>
