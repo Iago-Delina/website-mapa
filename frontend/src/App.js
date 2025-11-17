@@ -32,6 +32,7 @@ function App() {
           <Footer />
         </BrowserRouter>
       </AdminProvider>
+      </LanguageProvider>
     </div>
   );
 }
