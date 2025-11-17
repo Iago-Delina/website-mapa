@@ -65,7 +65,8 @@ const AdminMapForm = () => {
         complexity: formData.complexity,
         thumbnail: images[0] || '',
         images: images,
-        status: formData.status
+        status: formData.status,
+        cliente: formData.cliente || null
       });
 
       alert('Mapa criado com sucesso!');
