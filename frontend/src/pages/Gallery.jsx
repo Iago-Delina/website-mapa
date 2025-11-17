@@ -5,8 +5,10 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Badge } from '../components/ui/badge';
 import { Search, Filter, X, Loader2 } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Gallery = () => {
+  const { t } = useLanguage();
   const [maps, setMaps] = useState([]);
   const [allTags, setAllTags] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
