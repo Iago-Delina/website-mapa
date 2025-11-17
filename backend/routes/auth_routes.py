@@ -3,7 +3,12 @@ from models.admin import AdminLogin, TokenResponse, AdminResponse
 from utils.auth import verify_password, create_access_token
 from middleware.auth_middleware import get_current_admin
 from motor.motor_asyncio import AsyncIOMotorClient
+from dotenv import load_dotenv
+from pathlib import Path
 import os
+
+ROOT_DIR = Path(__file__).parent.parent
+load_dotenv(ROOT_DIR / '.env')
 
 router = APIRouter(prefix="/auth")
 
