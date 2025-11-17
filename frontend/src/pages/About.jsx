@@ -4,8 +4,10 @@ import { Button } from '../components/ui/button';
 import { Palette, Zap, Heart, Mail } from 'lucide-react';
 import DiscordIcon from '../components/icons/DiscordIcon';
 import WhatsAppIcon from '../components/icons/WhatsAppIcon';
+import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0a0a0b] via-[#0f1011] to-[#0a0a0b]">
       {/* Hero */}
