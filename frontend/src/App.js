@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AdminProvider } from "./context/AdminContext";
+import { LanguageProvider } from "./context/LanguageContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
@@ -15,8 +16,9 @@ import AdminMapEdit from "./pages/AdminMapEdit";
 function App() {
   return (
     <div className="App">
-      <AdminProvider>
-        <BrowserRouter>
+      <LanguageProvider>
+        <AdminProvider>
+          <BrowserRouter>
           <Header />
           <Routes>
             <Route path="/" element={<Gallery />} />
