@@ -12,16 +12,16 @@ const MapCard = ({ map }) => {
     <Link to={`/map/${map.slug}`} className="group block">
       <Card className="overflow-hidden bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-2 will-change-transform">
         {/* Image */}
-        <div className="relative overflow-hidden aspect-[4/3]" style={{backgroundColor: '#1f2937'}}>
+        <div className="relative overflow-hidden aspect-[4/3] bg-gray-800">
           {map.thumbnail ? (
             <>
               <img
                 src={map.thumbnail.startsWith('http') ? map.thumbnail : `${process.env.REACT_APP_BACKEND_URL}${map.thumbnail}`}
                 alt={map.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                style={{zIndex: 1}}
+                style={{zIndex: 1, display: 'block'}}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{zIndex: 2}} />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{zIndex: 2}} />
             </>
           ) : (
             <MapPlaceholder title={map.title} category={map.tags[0]} />
