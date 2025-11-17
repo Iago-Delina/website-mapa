@@ -146,20 +146,20 @@ const MapDetail = () => {
                   {map.status === 'available' ? (
                     <Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-500/30">
                       <CheckCircle2 className="mr-1 h-3 w-3" />
-                      Disponível
+                      {t('available')}
                     </Badge>
                   ) : (
                     <Badge variant="destructive">
                       <XCircle className="mr-1 h-3 w-3" />
-                      {map.cliente ? `Vendido: ${map.cliente}` : 'Vendido'}
+                      {map.cliente ? `${t('soldTo')}: ${map.cliente}` : t('sold')}
                     </Badge>
                   )}
                 </div>
                 <div className="text-2xl font-semibold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                  Orçamento Sob Consulta
+                  {t('quoteOnRequest')}
                 </div>
                 <p className="text-sm text-gray-400 mt-1">
-                  Entre em contato para valores personalizados
+                  {t('contactForCustomPricing')}
                 </p>
               </div>
 
