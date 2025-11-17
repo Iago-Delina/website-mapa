@@ -126,7 +126,7 @@ const Gallery = () => {
           {showFilters && (
             <div className="bg-gray-900/30 border border-emerald-500/10 rounded-lg p-4 animate-in slide-in-from-top duration-300">
               <h3 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">
-                Filtrar por categoria
+                {t('filterByCategory')}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {allTags.map((tag) => (
