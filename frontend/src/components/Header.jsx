@@ -48,8 +48,18 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Contact Buttons */}
+          {/* Contact Buttons & Language Toggle */}
           <div className="hidden md:flex items-center space-x-3">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="text-gray-400 hover:text-emerald-400 transition-colors"
+              title={language === 'pt' ? 'Switch to English' : 'Mudar para Português'}
+            >
+              <Globe className="h-4 w-4 mr-1" />
+              {language === 'pt' ? 'EN' : 'PT'}
+            </Button>
             <Button
               variant="outline"
               size="sm"
@@ -57,7 +67,7 @@ const Header = () => {
               onClick={() => window.open('https://discord.com', '_blank')}
             >
               <DiscordIcon className="mr-2" size={16} />
-              Discord
+              {t('discord')}
             </Button>
             <Button
               size="sm"
@@ -65,7 +75,7 @@ const Header = () => {
               onClick={() => window.open('https://wa.me/', '_blank')}
             >
               <WhatsAppIcon className="mr-2" size={16} />
-              WhatsApp
+              {t('whatsapp')}
             </Button>
           </div>
 
