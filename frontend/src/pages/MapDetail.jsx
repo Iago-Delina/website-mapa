@@ -20,9 +20,33 @@ import {
 
 const MapDetail = () => {
   const { slug } = useParams();
-  const map = mockMaps.find(m => m.slug === slug);
+  const [map, setMap] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState(0);
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+
+  useEffect(() => {
+    fetchMap();
+  }, [slug]);
+
+  const fetchMap = async () => {
+    try {
+      const data = await getMapBySlug(slug);
+      setMap(data);
+    } catch (error) {
+      console.error('Error fetching map:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-[#0a0a0b] via-[#0f1011] to-[#0a0a0b] flex items-center justify-center">
+        <Loader2 className="h-8 w-8 text-emerald-400 animate-spin" />
+      </div>
+    );
+  }
 
   if (!map) {
     return (
