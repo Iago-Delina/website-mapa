@@ -10,7 +10,6 @@ import { useLanguage } from '../context/LanguageContext';
 import { 
   ArrowLeft, 
   Maximize2, 
-  Download, 
   Calendar, 
   Ruler, 
   Tag,
