@@ -27,7 +27,7 @@ const MapCard = ({ map }) => {
           <div className="absolute top-3 right-3 flex flex-col gap-2">
             {map.status === 'sold' ? (
               <Badge className="bg-red-500/90 backdrop-blur-sm text-white border-0">
-                Vendido
+                {map.cliente ? `Vendido: ${map.cliente}` : 'Vendido'}
               </Badge>
             ) : (
               <Badge className="bg-emerald-500/90 backdrop-blur-sm text-white border-0">
