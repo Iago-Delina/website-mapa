@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
 import DiscordIcon from './icons/DiscordIcon';
 import WhatsAppIcon from './icons/WhatsAppIcon';
+import { useLanguage } from '../context/LanguageContext';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="bg-[#0a0a0b] border-t border-emerald-500/10 mt-20">
