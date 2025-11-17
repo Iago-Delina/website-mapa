@@ -150,7 +150,7 @@ const Gallery = () => {
           {/* Results Count */}
           <div className="flex items-center justify-between">
             <p className="text-sm text-gray-400">
-              {filteredMaps.length} {filteredMaps.length === 1 ? 'mapa encontrado' : 'mapas encontrados'}
+              {filteredMaps.length} {filteredMaps.length === 1 ? t('mapFound') : t('mapsFound')}
             </p>
           </div>
         </div>
