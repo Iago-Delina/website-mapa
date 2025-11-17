@@ -126,7 +126,7 @@ const About = () => {
               </Button>
               <Button
                 variant="outline"
-                className="border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10"
+                className="border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10 hover:text-emerald-300 hover:border-emerald-400"
                 onClick={() => window.location.href = 'mailto:contato@xhyz.com'}
               >
                 <Mail className="mr-2 h-4 w-4" />
