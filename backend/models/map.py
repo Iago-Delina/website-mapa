@@ -32,6 +32,7 @@ class MapBase(BaseModel):
     images: List[str] = []
     author: str = "Iago Delina"
     status: MapStatus = MapStatus.AVAILABLE
+    cliente: Optional[str] = None
 
 class MapCreate(MapBase):
     pass
