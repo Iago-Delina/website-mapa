@@ -7,9 +7,14 @@ from utils.slug import generate_slug
 from typing import List
 from datetime import datetime
 from bson import ObjectId
+from dotenv import load_dotenv
+from pathlib import Path
 import os
 import shutil
 import uuid
+
+ROOT_DIR = Path(__file__).parent.parent
+load_dotenv(ROOT_DIR / '.env')
 
 router = APIRouter(prefix="/admin")
 
