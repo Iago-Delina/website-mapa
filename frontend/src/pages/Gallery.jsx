@@ -117,7 +117,7 @@ const Gallery = () => {
                 className="text-gray-400 hover:text-white"
               >
                 <X className="mr-2 h-4 w-4" />
-                Limpar
+                {t('clear')}
               </Button>
             )}
           </div>
