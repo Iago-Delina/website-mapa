@@ -48,6 +48,7 @@ class MapUpdate(BaseModel):
     images: Optional[List[str]] = None
     author: Optional[str] = None
     status: Optional[MapStatus] = None
+    cliente: Optional[str] = None
 
 class MapResponse(MapBase):
     id: str = Field(alias="_id")
