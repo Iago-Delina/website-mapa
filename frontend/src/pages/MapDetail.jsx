@@ -149,7 +149,7 @@ const MapDetail = () => {
                   ) : (
                     <Badge variant="destructive">
                       <XCircle className="mr-1 h-3 w-3" />
-                      Vendido
+                      {map.cliente ? `Vendido: ${map.cliente}` : 'Vendido'}
                     </Badge>
                   )}
                 </div>
