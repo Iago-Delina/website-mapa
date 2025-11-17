@@ -72,10 +72,10 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-emerald-500/10 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-500 text-sm">
-            © {currentYear} Xhyz. Todos os direitos reservados.
+            © {currentYear} Xhyz. {t('allRightsReserved')}
           </p>
           <p className="text-gray-500 text-sm">
-            Desenvolvido com ❤️ para a comunidade Tibia
+            {t('developedWithLove')}
           </p>
         </div>
       </div>
