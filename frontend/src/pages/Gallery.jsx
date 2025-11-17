@@ -158,7 +158,11 @@ const Gallery = () => {
       {/* Maps Grid */}
       <div className="container mx-auto px-4 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
-          {filteredMaps.length > 0 ? (
+          {isLoading ? (
+            <div className="flex items-center justify-center py-20">
+              <Loader2 className="h-8 w-8 text-emerald-400 animate-spin" />
+            </div>
+          ) : filteredMaps.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredMaps.map((map, index) => (
                 <div
