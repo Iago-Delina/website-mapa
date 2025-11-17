@@ -76,7 +76,7 @@ const MapDetail = () => {
             className="text-gray-400 hover:text-emerald-400 -ml-2"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Voltar para Galeria
+            {t('backToGallery')}
           </Button>
         </Link>
       </div>
