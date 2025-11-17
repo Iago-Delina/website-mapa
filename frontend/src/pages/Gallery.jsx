@@ -179,17 +179,17 @@ const Gallery = () => {
             <div className="text-center py-20">
               <div className="text-6xl mb-4 opacity-20">🗺️</div>
               <h3 className="text-xl font-semibold text-gray-400 mb-2">
-                Nenhum mapa encontrado
+                {t('noMapsFound')}
               </h3>
               <p className="text-gray-500">
-                Tente ajustar os filtros ou buscar por outro termo.
+                {t('tryAdjusting')}
               </p>
               <Button
                 onClick={clearFilters}
                 variant="outline"
                 className="mt-6 border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10"
               >
-                Limpar filtros
+                {t('clearFilters')}
               </Button>
             </div>
           )}
