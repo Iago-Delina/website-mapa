@@ -34,7 +34,7 @@ const Header = () => {
                   : 'text-gray-400 hover:text-emerald-300'
               }`}
             >
-              Galeria
+              {t('gallery')}
             </Link>
             <Link
               to="/about"
@@ -44,7 +44,7 @@ const Header = () => {
                   : 'text-gray-400 hover:text-emerald-300'
               }`}
             >
-              Sobre
+              {t('about')}
             </Link>
           </nav>
 
