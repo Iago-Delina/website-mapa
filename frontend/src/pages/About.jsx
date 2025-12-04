@@ -110,7 +110,7 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button
                 className="bg-[#5865F2] hover:bg-[#4752C4] text-white transition-all duration-300 shadow-lg hover:shadow-xl"
-                onClick={() => window.open('https://discord.com', '_blank')}
+                onClick={() => window.open('https://discord.gg/hGm4sMgjzw', '_blank')}
               >
                 <DiscordIcon className="mr-2" size={20} />
                 {t('discord')}
