@@ -50,7 +50,7 @@ const Footer = () => {
                 {t('discord')}
               </a>
               <a
-                href="https://wa.me/"
+                href="https://wa.me/5511971553195"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-400 hover:text-emerald-400 text-sm transition-colors group"
