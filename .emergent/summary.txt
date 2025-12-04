@@ -1,0 +1,145 @@
+<analysis>**original_problem_statement:**
+The user wants to create a modern, stylish, and animated portfolio website called Xhyz to showcase and sell Tibia maps.
+
+**PRODUCT REQUIREMENTS:**
+- A gallery to display all available maps.
+- A detail page for each map.
+- Instead of direct payment, use contact buttons (Discord and WhatsApp) for inquiries and quotes.
+- An admin panel for the user to upload, create, edit, and delete maps.
+- The website must be bilingual (Portuguese and English).
+- The design should be modern with smooth animations.
+- Initial implementation can use simple image viewing, with advanced features like deep zoom to be considered later.
+
+**User's preferred language**: Portuguese. The next agent MUST respond in Portuguese.
+
+**what currently exists?**
+A complete full-stack application has been built.
+- **Frontend (React):** A fully functional user-facing website with a gallery, map detail page, and about page. It is integrated with the backend, fetching real data. It also includes a complete internationalization (i18n) system for Portuguese and English.
+- **Admin Panel (React):** A secure section with login (), a dashboard to list maps (), and forms to create () and edit () maps, including multi-image uploads.
+- **Backend (FastAPI):** A robust API with endpoints for public data fetching and protected admin actions (CRUD for maps). It uses a MongoDB database and JWT for authentication.
+
+**Last working item**:
+- **Last item agent was working:** Fixing a visual glitch on the map cards in the homepage gallery. When hovering, a 1-pixel line appears at the bottom of the card, breaking the visual integrity of the shadow effect.
+- **Status:** IN PROGRESS
+- **Agent Testing Done:** N (The agent's last attempt was not successful, as confirmed by its own thought process.)
+- **Which testing method agent to use?** screenshot tool
+- **User Testing Done:** N
+
+**All Pending/In progress Issue list**:
+- **Issue 1: Visual bug on map card hover (P0)**
+  - **Description**: On the gallery page (), hovering over a map card causes a translation animation. During this animation, a small 1-pixel gap appears at the bottom of the card, disrupting the overlay/shadow effect.
+  - **Status**: IN PROGRESS
+  - **Attempted fixes**: The agent tried adding CSS properties like ,  to the image, and  to the overlay within . This did not resolve the issue.
+  - **Next debug checklist**:
+      1. Inspect .
+      2. The issue is likely that the gradient overlay () is not perfectly covering the card during the hover transform ().
+      3. **Suggested Fix:** Instead of relying on , explicitly give the overlay a height slightly larger than the parent, e.g.,  or , and ensure it's positioned correctly to cover any gaps created by the transform. Another option is to apply the transform to an inner wrapper instead of the main card group.
+  - **Why fix this issue?** It's a UI polish issue that detracts from the modern and stylish look the user requested.
+  - **Should Test frontend/backend/both after fix?** Frontend.
+
+**In progress Task List**:
+- None.
+
+**Upcoming and Future Tasks**
+- **Future Tasks:**
+    - **Advanced Zoom Viewer (P2):** Implement a deep zoom viewer (e.g., OpenSeadragon) for map images on the detail page, as discussed in the initial clarification phase.
+    - **AI Map Variants (P2):** Explore the possibility of using AI to generate map variants (e.g., Dark, Light, Old-school styles).
+
+**Completed work in this session**
+- **Full-Stack Scaffolding**: Built the complete React frontend and FastAPI backend.
+- **Frontend Development**: Created all public-facing pages (Gallery, Map Detail, About) and layout components (Header, Footer).
+- **Backend Development**: Implemented database models (Map, Admin), authentication (JWT), and all necessary API endpoints for map management and image uploads.
+- **Admin Panel**: Developed a secure, full-featured admin area for the user to manage their map portfolio, including creation, editing, and deletion.
+- **Backend Integration**: Successfully replaced all frontend mock data with live data from the backend API.
+- **Internationalization (i18n)**: Implemented a complete translation system for Portuguese and English across all public pages.
+- **Bug Fixes & User Feedback**:
+    - Resolved critical backend login and authentication middleware bugs.
+    - Fixed multiple issues with images not appearing on cards (CORS, CSS z-index).
+    - Implemented user-requested features: changing price to on request, map size to categories, and adding a client field for sold maps.
+    - Fixed UI contrast issues on link hovers.
+    - Removed the Download Preview button as requested.
+
+**Earlier issues found/mentioned but not fixed**
+- None. The agent has addressed all issues raised by the user so far.
+
+**Known issue recurrence from previous fork**
+- N/A
+
+**Code Architecture**
+
+
+**Key Technical Concepts**
+- **Frontend**: React, React Router, React Context API, TailwindCSS, Axios
+- **Backend**: FastAPI, MongoDB (Motor async driver), Pydantic, JWT
+- **Authentication**: Token-based (JWT) for the admin panel.
+- **File Handling**: Multipart file uploads for map images, stored locally on the server.
+- **Internationalization (i18n)**: A custom solution using React Context and a simple translation object.
+
+**key DB schema**
+- **maps**: 
+- **admins**: 
+
+**changes in tech stack**
+- None.
+
+**All files of reference**
+- : This file contains the card component with the current visual bug.
+- : Contains the core logic for protecting admin routes.
+- : Manages the application's language state.
+- : The form for creating and editing maps.
+- : Defines the backend logic for map management.
+
+**Areas that need refactoring**:
+- None critical. The i18n implementation is basic but sufficient for the current scope.
+
+**key api endpoints**
+- **Public:**
+  - : Fetches all maps for the gallery.
+  - : Fetches details for a single map.
+- **Admin (Protected):**
+  - : Admin login.
+  - : Create a new map.
+  - : Update an existing map.
+  - : Delete a map.
+  - : Upload an image file.
+
+**Critical Info for New Agent**
+- The user is non-technical but provides excellent, specific feedback. Prioritize addressing their requests clearly and directly.
+- The application is feature-complete for the MVP. The primary focus should be on polishing and bug-fixing.
+- The admin credentials are hardcoded for seeding: , .
+
+**documents created in this job**
+- : Contains the initial plan for the backend and API structure.
+
+**Last 10 User Messages and any pending user messages**
+1.  **User:** Reports the hover effect on homepage cards is bugged, showing a pixel line. **(PENDING)**
+2.  **User:** Praises the new photo display on the homepage. **(Completed)**
+3.  **User:** Points out the , , and  link hover color has bad contrast. **(Completed)**
+4.  **User:** Asks if an English/Portuguese language toggle can be added. **(Completed)**
+5.  **User:** Notes the language toggle logic feels inverted and asks for translations to be added. **(Completed)**
+6.  **User:** Confirms the  and  sections need translation. **(Completed)**
+7.  **User:** Points out the map detail page is not translated. **(Completed)**
+8.  **User:** Asks for dynamic values like Size: Médio and Complexity: Intermediário to be translated. **(Completed)**
+9.  **User:** Requests to remove the Download Preview button. **(Completed)**
+10. **User:** Reports that after fixing the Vendido tag, the cover image on the homepage is now blank. **(Completed)**
+
+**Project Health Check:**
+- **Broken**: The hover animation on  has a minor visual bug.
+- **Mocked**: None. The app is fully integrated with the backend.
+
+**3rd Party Integrations**:
+- None.
+
+**Testing status**
+- **Testing agent used after significant changes**: NO
+- **Troubleshoot agent used after agent stuck in loop**: NO
+- **Test files created**: None.
+- **Known regressions**: None.
+
+**Credentials to test flow:**
+- **Admin Panel URL**: 
+- **Username**: 
+- **Password**: 
+
+**What agent forgot to execute**
+- The agent has not forgotten any tasks requested by the user.</analysis>
