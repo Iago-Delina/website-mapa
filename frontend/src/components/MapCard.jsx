@@ -51,7 +51,7 @@ const MapCard = ({ map }) => {
         </div>
 
         {/* Content */}
-        <div className="p-5 space-y-3">
+        <div className="p-5 space-y-3 -mt-px">
           <div className="flex items-start justify-between">
             <h3 className="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors line-clamp-1">
               {map.title}
