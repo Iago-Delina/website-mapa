@@ -94,7 +94,6 @@ const MapCard = ({ map }) => {
             </Badge>
           </div>
         </div>
-        </div>
       </Card>
     </Link>
   );
