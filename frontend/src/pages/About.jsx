@@ -117,7 +117,7 @@ const About = () => {
               </Button>
               <Button
                 className="bg-[#25D366] hover:bg-[#20BA5A] text-white transition-all duration-300 shadow-lg hover:shadow-xl"
-                onClick={() => window.open('https://wa.me/', '_blank')}
+                onClick={() => window.open('https://wa.me/5511971553195', '_blank')}
               >
                 <WhatsAppIcon className="mr-2" size={20} />
                 {t('whatsapp')}
