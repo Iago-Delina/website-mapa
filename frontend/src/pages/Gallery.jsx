@@ -64,7 +64,7 @@ const Gallery = () => {
     <div className="min-h-screen bg-gradient-to-b from-[#0a0a0b] via-[#0f1011] to-[#0a0a0b]">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://customer-assets.emergentagent.com/job_tibiaworld/artifacts/sce1jv5e_image.png')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('https://customer-assets.emergentagent.com/job_tibiaworld/artifacts/eoptxobq_image.png')] bg-cover bg-center opacity-10" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0b]/80 to-[#0a0a0b]" />
         
         <div className="relative container mx-auto px-4 lg:px-8 pt-32 pb-20">
