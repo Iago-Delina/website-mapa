@@ -122,7 +122,7 @@ const Header = () => {
               <Button
                 size="sm"
                 className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white w-full justify-center"
-                onClick={() => window.open('https://wa.me/', '_blank')}
+                onClick={() => window.open('https://wa.me/5511971553195', '_blank')}
               >
                 <WhatsAppIcon className="mr-2" size={16} />
                 WhatsApp
