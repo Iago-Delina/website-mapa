@@ -41,7 +41,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">{t('contact')}</h3>
             <div className="space-y-3">
               <a
-                href="https://discord.com"
+                href="https://discord.gg/hGm4sMgjzw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-400 hover:text-emerald-400 text-sm transition-colors group"
