@@ -72,7 +72,7 @@ const Header = () => {
             <Button
               size="sm"
               className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white transition-all duration-300 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40"
-              onClick={() => window.open('https://wa.me/', '_blank')}
+              onClick={() => window.open('https://wa.me/5511971553195', '_blank')}
             >
               <WhatsAppIcon className="mr-2" size={16} />
               {t('whatsapp')}
