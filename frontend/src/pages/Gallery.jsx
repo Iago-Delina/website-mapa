@@ -64,7 +64,7 @@ const Gallery = () => {
     <div className="min-h-screen bg-gradient-to-b from-[#0a0a0b] via-[#0f1011] to-[#0a0a0b]">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511497584788-876760111969?w=1920&h=600&fit=crop')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-[url('https://preview.redd.it/mapa-do-meu-cenario-de-rpg-v0-vo8h74g9kjhe1.jpg?width=4096&format=pjpg&auto=webp&s=73404b1014f5fc62a2f056ebe86967f125b0faec')] bg-cover bg-center opacity-10" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0b]/80 to-[#0a0a0b]" />
         
         <div className="relative container mx-auto px-4 lg:px-8 pt-32 pb-20">
