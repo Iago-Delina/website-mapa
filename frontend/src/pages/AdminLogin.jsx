@@ -85,11 +85,6 @@ const AdminLogin = () => {
             {isLoading ? 'Entrando...' : 'Entrar'}
           </Button>
         </form>
-
-        <div className="mt-6 text-center text-sm text-gray-500">
-          <p>Credenciais padrão:</p>
-          <p className="text-gray-400">admin / Xhyz@2025!</p>
-        </div>
       </Card>
     </div>
   );
