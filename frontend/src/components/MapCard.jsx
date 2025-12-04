@@ -12,7 +12,7 @@ const MapCard = ({ map }) => {
     <Link to={`/map/${map.slug}`} className="group block">
       <Card className="overflow-hidden bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-2">
         {/* Image */}
-        <div className="relative overflow-hidden aspect-[4/3] bg-gray-800">
+        <div className="relative overflow-hidden aspect-[4/3] bg-gray-800 block leading-[0]">
           {map.thumbnail ? (
             <>
               <img
