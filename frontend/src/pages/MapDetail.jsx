@@ -230,7 +230,7 @@ const MapDetail = () => {
                 <div className="space-y-3">
                   <Button
                     className="w-full bg-[#5865F2] hover:bg-[#4752C4] text-white transition-all duration-300 shadow-lg hover:shadow-xl"
-                    onClick={() => window.open('https://discord.com', '_blank')}
+                    onClick={() => window.open('https://discord.gg/hGm4sMgjzw', '_blank')}
                   >
                     <DiscordIcon className="mr-2" size={20} />
                     {t('contactViaDiscord')}
