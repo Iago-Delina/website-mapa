@@ -10,8 +10,7 @@ const MapCard = ({ map }) => {
   const { t } = useLanguage();
   return (
     <Link to={`/map/${map.slug}`} className="group block">
-      <Card className="overflow-hidden bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/20">
-        <div className="transition-transform duration-500 group-hover:-translate-y-2">
+      <Card className="overflow-hidden bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-2">
         {/* Image */}
         <div className="relative overflow-hidden aspect-[4/3] bg-gray-800">
           {map.thumbnail ? (
@@ -22,7 +21,7 @@ const MapCard = ({ map }) => {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 block"
               />
               <div 
-                className="absolute inset-0 w-full h-full bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                className="absolute inset-0 w-full h-[101%] bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
               />
             </>
           ) : (
